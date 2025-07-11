@@ -1,0 +1,166 @@
+/* Basic Reset & Font */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #1e8449; /* Darker green */
+    color: #ffffff;
+    padding: 15px 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-bottom-left-radius: 8px; /* Rounded corners */
+    border-bottom-right-radius: 8px;
+}
+
+/* Navigation Styling */
+nav {
+    background-color: #27ae60; /* Slightly lighter green for nav */
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px; /* Increased padding for better touch targets */
+    margin: 0 5px;
+    border-radius: 5px; /* Rounded buttons */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    display: block; /* Make links block for better touch targets on mobile */
+    margin-bottom: 5px; /* Space between nav items on mobile */
+}
+nav a:hover, nav a.active {
+    background-color: #1abc9c; /* Teal on hover/active (kept as accent) */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Main Content Container */
+.container {
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 800px; /* Max width for readability on large screens */
+}
+
+/* Section Styling */
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px; /* Rounded corners for sections */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Headings Styling */
+h2, h3, h4 {
+    color: #1e8449; /* Darker green for headings */
+    border-bottom: 2px solid #1abc9c; /* Teal underline (kept as accent) */
+    padding-bottom: 5px;
+    margin-top: 25px; /* More space above headings */
+    margin-bottom: 15px;
+}
+
+/* List Styling */
+ul {
+    list-style-type: none; /* Remove default bullet */
+    padding: 0;
+}
+ul li {
+    margin-bottom: 10px; /* Space between list items */
+    padding-left: 25px; /* Indent for custom bullet */
+    position: relative;
+}
+ul li:before {
+    content: '•'; /* Custom bullet point */
+    color: #1abc9c; /* Teal bullet (kept as accent) */
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    line-height: 1; /* Align bullet vertically */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    overflow-x: auto; /* Enable horizontal scrolling for tables on small screens */
+    display: block; /* Ensure block display for overflow-x to work */
+    border-radius: 8px; /* Rounded corners for table */
+    overflow: hidden; /* Hide overflow for rounded corners */
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px; /* More padding for table cells */
+    text-align: left;
+}
+th {
+    background-color: #e8f8f5; /* Very light green/grey for table headers */
+    color: #1e8449; /* Darker green for table header text */
+    font-weight: bold;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping for rows */
+}
+
+/* Citation/Small Text */
+.citation {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 10px;
+    display: block;
+    text-align: right;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 0.9em;
+    background-color: #e0e0e0; /* Light grey footer */
+    margin-top: 20px;
+    border-top-left-radius: 8px; /* Rounded corners */
+    border-top-right-radius: 8px;
+}
+
+/* Scroll to Top Button Styling */
+#scrollToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* 20px from the bottom */
+    right: 20px; /* 20px from the right */
+    z-index: 99; /* Ensure it's above other content */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #1abc9c; /* Teal background (kept as accent) */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 50%; /* Rounded button */
+    font-size: 18px; /* Increase font size */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #16a085; /* Darker teal on hover (kept as accent) */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Responsive adjustments for larger screens (e.g., tablets and desktops) */
+@media (min-width: 600px) {
+    nav a {
+        display: inline-block; /* Revert to inline-block for larger screens */
+        margin-bottom: 0; /* Remove bottom margin on larger screens */
+    }
+    table {
+        display: table; /* Revert to table display for larger screens */
+    }
+}
